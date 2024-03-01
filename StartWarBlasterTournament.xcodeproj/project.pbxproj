@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		596C95982B7B715600AF449A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95972B7B715600AF449A /* AppDelegate.swift */; };
+		596C959A2B7B715600AF449A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95992B7B715600AF449A /* SceneDelegate.swift */; };
+		596C959C2B7B715600AF449A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C959B2B7B715600AF449A /* ViewController.swift */; };
+		596C959F2B7B715600AF449A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596C959D2B7B715600AF449A /* Main.storyboard */; };
+		596C95A12B7B715800AF449A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596C95A02B7B715800AF449A /* Assets.xcassets */; };
+		596C95A42B7B715800AF449A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596C95A22B7B715800AF449A /* LaunchScreen.storyboard */; };
+		596C95AF2B7B715800AF449A /* StartWarBlasterTournamentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95AE2B7B715800AF449A /* StartWarBlasterTournamentTests.swift */; };
+		596C95B92B7B715800AF449A /* StartWarBlasterTournamentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95B82B7B715800AF449A /* StartWarBlasterTournamentUITests.swift */; };
+		596C95BB2B7B715800AF449A /* StartWarBlasterTournamentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95BA2B7B715800AF449A /* StartWarBlasterTournamentUITestsLaunchTests.swift */; };
+		596C95C92B7B71D100AF449A /* StarWarsPlayers.json in Resources */ = {isa = PBXBuildFile; fileRef = 596C95C72B7B71D100AF449A /* StarWarsPlayers.json */; };
+		596C95CA2B7B71D100AF449A /* StarWarsMatches.json in Resources */ = {isa = PBXBuildFile; fileRef = 596C95C82B7B71D100AF449A /* StarWarsMatches.json */; };
+		596C95CD2B7B720F00AF449A /* PlayersMatchDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95CC2B7B720F00AF449A /* PlayersMatchDataService.swift */; };
+		596C95D02B7B723D00AF449A /* PlayerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95CF2B7B723D00AF449A /* PlayerDataModel.swift */; };
+		596C95D22B7B72AE00AF449A /* MatchesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95D12B7B72AE00AF449A /* MatchesDataModel.swift */; };
+		596C95D62B7B747900AF449A /* PlayersPointTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95D42B7B747900AF449A /* PlayersPointTableViewController.swift */; };
+		596C95D72B7B747900AF449A /* PlayersPointTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 596C95D52B7B747900AF449A /* PlayersPointTableViewController.xib */; };
+		596C95DB2B7B74AB00AF449A /* PlayersPointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95D92B7B74AB00AF449A /* PlayersPointTableViewCell.swift */; };
+		596C95DC2B7B74AB00AF449A /* PlayersPointTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 596C95DA2B7B74AB00AF449A /* PlayersPointTableViewCell.xib */; };
+		596C95E12B7B781100AF449A /* PlayersPointTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95E02B7B781100AF449A /* PlayersPointTableViewModel.swift */; };
+		596C95E52B7B87E100AF449A /* PlayersMatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95E32B7B87E100AF449A /* PlayersMatchDetailsViewController.swift */; };
+		596C95E62B7B87E100AF449A /* PlayersMatchDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 596C95E42B7B87E100AF449A /* PlayersMatchDetailsViewController.xib */; };
+		596C95E92B7B880600AF449A /* PlayerMatchPlayedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95E72B7B880600AF449A /* PlayerMatchPlayedTableViewCell.swift */; };
+		596C95EA2B7B880600AF449A /* PlayerMatchPlayedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 596C95E82B7B880600AF449A /* PlayerMatchPlayedTableViewCell.xib */; };
+		596C95EF2B7B8A1800AF449A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 596C95EE2B7B8A1800AF449A /* SDWebImage */; };
+		596C95F12B7B8A1800AF449A /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 596C95F02B7B8A1800AF449A /* SDWebImageMapKit */; };
+		596C95F32B7B8A3900AF449A /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95F22B7B8A3900AF449A /* UIImageViewExtension.swift */; };
+		596C95F52B7B8D2600AF449A /* PlayerMatchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C95F42B7B8D2600AF449A /* PlayerMatchDetailsViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		596C95AB2B7B715800AF449A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 596C958C2B7B715600AF449A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 596C95932B7B715600AF449A;
+			remoteInfo = StartWarBlasterTournament;
+		};
+		596C95B52B7B715800AF449A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 596C958C2B7B715600AF449A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 596C95932B7B715600AF449A;
+			remoteInfo = StartWarBlasterTournament;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		596C95942B7B715600AF449A /* StartWarBlasterTournament.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StartWarBlasterTournament.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		596C95972B7B715600AF449A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		596C95992B7B715600AF449A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		596C959B2B7B715600AF449A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		596C959E2B7B715600AF449A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		596C95A02B7B715800AF449A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		596C95A32B7B715800AF449A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		596C95A52B7B715800AF449A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		596C95AA2B7B715800AF449A /* StartWarBlasterTournamentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StartWarBlasterTournamentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		596C95AE2B7B715800AF449A /* StartWarBlasterTournamentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWarBlasterTournamentTests.swift; sourceTree = "<group>"; };
+		596C95B42B7B715800AF449A /* StartWarBlasterTournamentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StartWarBlasterTournamentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		596C95B82B7B715800AF449A /* StartWarBlasterTournamentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWarBlasterTournamentUITests.swift; sourceTree = "<group>"; };
+		596C95BA2B7B715800AF449A /* StartWarBlasterTournamentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWarBlasterTournamentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		596C95C72B7B71D100AF449A /* StarWarsPlayers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StarWarsPlayers.json; sourceTree = "<group>"; };
+		596C95C82B7B71D100AF449A /* StarWarsMatches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StarWarsMatches.json; sourceTree = "<group>"; };
+		596C95CC2B7B720F00AF449A /* PlayersMatchDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersMatchDataService.swift; sourceTree = "<group>"; };
+		596C95CF2B7B723D00AF449A /* PlayerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDataModel.swift; sourceTree = "<group>"; };
+		596C95D12B7B72AE00AF449A /* MatchesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesDataModel.swift; sourceTree = "<group>"; };
+		596C95D42B7B747900AF449A /* PlayersPointTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersPointTableViewController.swift; sourceTree = "<group>"; };
+		596C95D52B7B747900AF449A /* PlayersPointTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersPointTableViewController.xib; sourceTree = "<group>"; };
+		596C95D92B7B74AB00AF449A /* PlayersPointTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersPointTableViewCell.swift; sourceTree = "<group>"; };
+		596C95DA2B7B74AB00AF449A /* PlayersPointTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersPointTableViewCell.xib; sourceTree = "<group>"; };
+		596C95E02B7B781100AF449A /* PlayersPointTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersPointTableViewModel.swift; sourceTree = "<group>"; };
+		596C95E32B7B87E100AF449A /* PlayersMatchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersMatchDetailsViewController.swift; sourceTree = "<group>"; };
+		596C95E42B7B87E100AF449A /* PlayersMatchDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersMatchDetailsViewController.xib; sourceTree = "<group>"; };
+		596C95E72B7B880600AF449A /* PlayerMatchPlayedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMatchPlayedTableViewCell.swift; sourceTree = "<group>"; };
+		596C95E82B7B880600AF449A /* PlayerMatchPlayedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerMatchPlayedTableViewCell.xib; sourceTree = "<group>"; };
+		596C95F22B7B8A3900AF449A /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		596C95F42B7B8D2600AF449A /* PlayerMatchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMatchDetailsViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		596C95912B7B715600AF449A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596C95F12B7B8A1800AF449A /* SDWebImageMapKit in Frameworks */,
+				596C95EF2B7B8A1800AF449A /* SDWebImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		596C95A72B7B715800AF449A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		596C95B12B7B715800AF449A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		596C958B2B7B715600AF449A = {
+			isa = PBXGroup;
+			children = (
+				596C95962B7B715600AF449A /* StartWarBlasterTournament */,
+				596C95AD2B7B715800AF449A /* StartWarBlasterTournamentTests */,
+				596C95B72B7B715800AF449A /* StartWarBlasterTournamentUITests */,
+				596C95952B7B715600AF449A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		596C95952B7B715600AF449A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				596C95942B7B715600AF449A /* StartWarBlasterTournament.app */,
+				596C95AA2B7B715800AF449A /* StartWarBlasterTournamentTests.xctest */,
+				596C95B42B7B715800AF449A /* StartWarBlasterTournamentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		596C95962B7B715600AF449A /* StartWarBlasterTournament */ = {
+			isa = PBXGroup;
+			children = (
+				596C95EC2B7B882900AF449A /* Common */,
+				596C95E22B7B87C300AF449A /* PlayersMatchDetails */,
+				596C95DD2B7B76BE00AF449A /* Extensions */,
+				596C95D32B7B745A00AF449A /* PlayersPointTable */,
+				596C95CB2B7B71F000AF449A /* Network */,
+				596C95C82B7B71D100AF449A /* StarWarsMatches.json */,
+				596C95C72B7B71D100AF449A /* StarWarsPlayers.json */,
+				596C95972B7B715600AF449A /* AppDelegate.swift */,
+				596C95992B7B715600AF449A /* SceneDelegate.swift */,
+				596C959B2B7B715600AF449A /* ViewController.swift */,
+				596C959D2B7B715600AF449A /* Main.storyboard */,
+				596C95A02B7B715800AF449A /* Assets.xcassets */,
+				596C95A22B7B715800AF449A /* LaunchScreen.storyboard */,
+				596C95A52B7B715800AF449A /* Info.plist */,
+			);
+			path = StartWarBlasterTournament;
+			sourceTree = "<group>";
+		};
+		596C95AD2B7B715800AF449A /* StartWarBlasterTournamentTests */ = {
+			isa = PBXGroup;
+			children = (
+				596C95AE2B7B715800AF449A /* StartWarBlasterTournamentTests.swift */,
+			);
+			path = StartWarBlasterTournamentTests;
+			sourceTree = "<group>";
+		};
+		596C95B72B7B715800AF449A /* StartWarBlasterTournamentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				596C95B82B7B715800AF449A /* StartWarBlasterTournamentUITests.swift */,
+				596C95BA2B7B715800AF449A /* StartWarBlasterTournamentUITestsLaunchTests.swift */,
+			);
+			path = StartWarBlasterTournamentUITests;
+			sourceTree = "<group>";
+		};
+		596C95CB2B7B71F000AF449A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				596C95CE2B7B722300AF449A /* Model */,
+				596C95CC2B7B720F00AF449A /* PlayersMatchDataService.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		596C95CE2B7B722300AF449A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				596C95CF2B7B723D00AF449A /* PlayerDataModel.swift */,
+				596C95D12B7B72AE00AF449A /* MatchesDataModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		596C95D32B7B745A00AF449A /* PlayersPointTable */ = {
+			isa = PBXGroup;
+			children = (
+				596C95D82B7B747F00AF449A /* Cells */,
+				596C95D42B7B747900AF449A /* PlayersPointTableViewController.swift */,
+				596C95D52B7B747900AF449A /* PlayersPointTableViewController.xib */,
+				596C95E02B7B781100AF449A /* PlayersPointTableViewModel.swift */,
+			);
+			name = PlayersPointTable;
+			sourceTree = "<group>";
+		};
+		596C95D82B7B747F00AF449A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				596C95D92B7B74AB00AF449A /* PlayersPointTableViewCell.swift */,
+				596C95DA2B7B74AB00AF449A /* PlayersPointTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		596C95DD2B7B76BE00AF449A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				596C95F22B7B8A3900AF449A /* UIImageViewExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		596C95E22B7B87C300AF449A /* PlayersMatchDetails */ = {
+			isa = PBXGroup;
+			children = (
+				596C95EB2B7B880E00AF449A /* Cells */,
+				596C95E32B7B87E100AF449A /* PlayersMatchDetailsViewController.swift */,
+				596C95E42B7B87E100AF449A /* PlayersMatchDetailsViewController.xib */,
+				596C95F42B7B8D2600AF449A /* PlayerMatchDetailsViewModel.swift */,
+			);
+			name = PlayersMatchDetails;
+			sourceTree = "<group>";
+		};
+		596C95EB2B7B880E00AF449A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				596C95E72B7B880600AF449A /* PlayerMatchPlayedTableViewCell.swift */,
+				596C95E82B7B880600AF449A /* PlayerMatchPlayedTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		596C95EC2B7B882900AF449A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		596C95932B7B715600AF449A /* StartWarBlasterTournament */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 596C95BE2B7B715800AF449A /* Build configuration list for PBXNativeTarget "StartWarBlasterTournament" */;
+			buildPhases = (
+				596C95902B7B715600AF449A /* Sources */,
+				596C95912B7B715600AF449A /* Frameworks */,
+				596C95922B7B715600AF449A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StartWarBlasterTournament;
+			packageProductDependencies = (
+				596C95EE2B7B8A1800AF449A /* SDWebImage */,
+				596C95F02B7B8A1800AF449A /* SDWebImageMapKit */,
+			);
+			productName = StartWarBlasterTournament;
+			productReference = 596C95942B7B715600AF449A /* StartWarBlasterTournament.app */;
+			productType = "com.apple.product-type.application";
+		};
+		596C95A92B7B715800AF449A /* StartWarBlasterTournamentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 596C95C12B7B715800AF449A /* Build configuration list for PBXNativeTarget "StartWarBlasterTournamentTests" */;
+			buildPhases = (
+				596C95A62B7B715800AF449A /* Sources */,
+				596C95A72B7B715800AF449A /* Frameworks */,
+				596C95A82B7B715800AF449A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				596C95AC2B7B715800AF449A /* PBXTargetDependency */,
+			);
+			name = StartWarBlasterTournamentTests;
+			productName = StartWarBlasterTournamentTests;
+			productReference = 596C95AA2B7B715800AF449A /* StartWarBlasterTournamentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		596C95B32B7B715800AF449A /* StartWarBlasterTournamentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 596C95C42B7B715800AF449A /* Build configuration list for PBXNativeTarget "StartWarBlasterTournamentUITests" */;
+			buildPhases = (
+				596C95B02B7B715800AF449A /* Sources */,
+				596C95B12B7B715800AF449A /* Frameworks */,
+				596C95B22B7B715800AF449A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				596C95B62B7B715800AF449A /* PBXTargetDependency */,
+			);
+			name = StartWarBlasterTournamentUITests;
+			productName = StartWarBlasterTournamentUITests;
+			productReference = 596C95B42B7B715800AF449A /* StartWarBlasterTournamentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		596C958C2B7B715600AF449A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					596C95932B7B715600AF449A = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					596C95A92B7B715800AF449A = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 596C95932B7B715600AF449A;
+					};
+					596C95B32B7B715800AF449A = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 596C95932B7B715600AF449A;
+					};
+				};
+			};
+			buildConfigurationList = 596C958F2B7B715600AF449A /* Build configuration list for PBXProject "StartWarBlasterTournament" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 596C958B2B7B715600AF449A;
+			packageReferences = (
+				596C95ED2B7B8A1800AF449A /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
+			productRefGroup = 596C95952B7B715600AF449A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				596C95932B7B715600AF449A /* StartWarBlasterTournament */,
+				596C95A92B7B715800AF449A /* StartWarBlasterTournamentTests */,
+				596C95B32B7B715800AF449A /* StartWarBlasterTournamentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		596C95922B7B715600AF449A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596C95EA2B7B880600AF449A /* PlayerMatchPlayedTableViewCell.xib in Resources */,
+				596C95E62B7B87E100AF449A /* PlayersMatchDetailsViewController.xib in Resources */,
+				596C95A42B7B715800AF449A /* LaunchScreen.storyboard in Resources */,
+				596C95D72B7B747900AF449A /* PlayersPointTableViewController.xib in Resources */,
+				596C95CA2B7B71D100AF449A /* StarWarsMatches.json in Resources */,
+				596C95A12B7B715800AF449A /* Assets.xcassets in Resources */,
+				596C959F2B7B715600AF449A /* Main.storyboard in Resources */,
+				596C95DC2B7B74AB00AF449A /* PlayersPointTableViewCell.xib in Resources */,
+				596C95C92B7B71D100AF449A /* StarWarsPlayers.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		596C95A82B7B715800AF449A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		596C95B22B7B715800AF449A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		596C95902B7B715600AF449A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596C95F52B7B8D2600AF449A /* PlayerMatchDetailsViewModel.swift in Sources */,
+				596C95CD2B7B720F00AF449A /* PlayersMatchDataService.swift in Sources */,
+				596C95D62B7B747900AF449A /* PlayersPointTableViewController.swift in Sources */,
+				596C959C2B7B715600AF449A /* ViewController.swift in Sources */,
+				596C95E92B7B880600AF449A /* PlayerMatchPlayedTableViewCell.swift in Sources */,
+				596C95982B7B715600AF449A /* AppDelegate.swift in Sources */,
+				596C95D22B7B72AE00AF449A /* MatchesDataModel.swift in Sources */,
+				596C95E52B7B87E100AF449A /* PlayersMatchDetailsViewController.swift in Sources */,
+				596C95D02B7B723D00AF449A /* PlayerDataModel.swift in Sources */,
+				596C95E12B7B781100AF449A /* PlayersPointTableViewModel.swift in Sources */,
+				596C959A2B7B715600AF449A /* SceneDelegate.swift in Sources */,
+				596C95F32B7B8A3900AF449A /* UIImageViewExtension.swift in Sources */,
+				596C95DB2B7B74AB00AF449A /* PlayersPointTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		596C95A62B7B715800AF449A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596C95AF2B7B715800AF449A /* StartWarBlasterTournamentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		596C95B02B7B715800AF449A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596C95B92B7B715800AF449A /* StartWarBlasterTournamentUITests.swift in Sources */,
+				596C95BB2B7B715800AF449A /* StartWarBlasterTournamentUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		596C95AC2B7B715800AF449A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 596C95932B7B715600AF449A /* StartWarBlasterTournament */;
+			targetProxy = 596C95AB2B7B715800AF449A /* PBXContainerItemProxy */;
+		};
+		596C95B62B7B715800AF449A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 596C95932B7B715600AF449A /* StartWarBlasterTournament */;
+			targetProxy = 596C95B52B7B715800AF449A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		596C959D2B7B715600AF449A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				596C959E2B7B715600AF449A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		596C95A22B7B715800AF449A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				596C95A32B7B715800AF449A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		596C95BC2B7B715800AF449A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		596C95BD2B7B715800AF449A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		596C95BF2B7B715800AF449A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StartWarBlasterTournament/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartspends.StartWarBlasterTournament;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		596C95C02B7B715800AF449A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StartWarBlasterTournament/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartspends.StartWarBlasterTournament;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		596C95C22B7B715800AF449A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartspends.StartWarBlasterTournamentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StartWarBlasterTournament.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StartWarBlasterTournament";
+			};
+			name = Debug;
+		};
+		596C95C32B7B715800AF449A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartspends.StartWarBlasterTournamentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StartWarBlasterTournament.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StartWarBlasterTournament";
+			};
+			name = Release;
+		};
+		596C95C52B7B715800AF449A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartspends.StartWarBlasterTournamentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StartWarBlasterTournament;
+			};
+			name = Debug;
+		};
+		596C95C62B7B715800AF449A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartspends.StartWarBlasterTournamentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StartWarBlasterTournament;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		596C958F2B7B715600AF449A /* Build configuration list for PBXProject "StartWarBlasterTournament" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				596C95BC2B7B715800AF449A /* Debug */,
+				596C95BD2B7B715800AF449A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		596C95BE2B7B715800AF449A /* Build configuration list for PBXNativeTarget "StartWarBlasterTournament" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				596C95BF2B7B715800AF449A /* Debug */,
+				596C95C02B7B715800AF449A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		596C95C12B7B715800AF449A /* Build configuration list for PBXNativeTarget "StartWarBlasterTournamentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				596C95C22B7B715800AF449A /* Debug */,
+				596C95C32B7B715800AF449A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		596C95C42B7B715800AF449A /* Build configuration list for PBXNativeTarget "StartWarBlasterTournamentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				596C95C52B7B715800AF449A /* Debug */,
+				596C95C62B7B715800AF449A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		596C95ED2B7B8A1800AF449A /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.11;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		596C95EE2B7B8A1800AF449A /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 596C95ED2B7B8A1800AF449A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		596C95F02B7B8A1800AF449A /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 596C95ED2B7B8A1800AF449A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 596C958C2B7B715600AF449A /* Project object */;
+}

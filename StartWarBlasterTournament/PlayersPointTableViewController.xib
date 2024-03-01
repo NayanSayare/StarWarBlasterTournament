@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayersPointTableViewController" customModule="StartWarBlasterTournament" customModuleProvider="target">
+            <connections>
+                <outlet property="navigationBar" destination="qKn-FX-jou" id="2Cg-8D-XKX"/>
+                <outlet property="tblPlayersPoint" destination="Ofm-aj-0yz" id="LUb-ay-hWO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKn-FX-jou">
+                    <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="HOo-9t-mZo"/>
+                    </constraints>
+                    <textAttributes key="titleTextAttributes">
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Title" id="H6A-TK-Fea">
+                            <barButtonItem key="backBarButtonItem" title="Back" id="tzE-vY-2O6"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3o-jH-u9f">
+                    <rect key="frame" x="0.0" y="103" width="393" height="54"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points Table" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrE-IQ-djD">
+                            <rect key="frame" x="16" y="12" width="361" height="30"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSC-1D-usT">
+                            <rect key="frame" x="333" y="5" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="47Q-Nx-WsN"/>
+                                <constraint firstAttribute="width" constant="44" id="Rkw-ga-wAH"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="paperplane" catalog="system"/>
+                            <connections>
+                                <action selector="didTapOnSort:" destination="-1" eventType="touchUpInside" id="d7j-c7-Mjx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97647058823529409" green="0.97254901960784312" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="aSC-1D-usT" secondAttribute="bottom" constant="5" id="8Ca-BE-x1N"/>
+                        <constraint firstItem="aSC-1D-usT" firstAttribute="top" secondItem="E3o-jH-u9f" secondAttribute="top" constant="5" id="ASa-pF-4Pi"/>
+                        <constraint firstItem="vrE-IQ-djD" firstAttribute="top" secondItem="E3o-jH-u9f" secondAttribute="top" constant="12" id="LOI-Vl-3ba"/>
+                        <constraint firstItem="vrE-IQ-djD" firstAttribute="leading" secondItem="E3o-jH-u9f" secondAttribute="leading" constant="16" id="VVo-cj-TgV"/>
+                        <constraint firstAttribute="trailing" secondItem="vrE-IQ-djD" secondAttribute="trailing" constant="16" id="X3G-lh-ldt"/>
+                        <constraint firstAttribute="trailing" secondItem="aSC-1D-usT" secondAttribute="trailing" constant="16" id="jw4-f5-1Lp"/>
+                        <constraint firstAttribute="bottom" secondItem="vrE-IQ-djD" secondAttribute="bottom" constant="12" id="zOH-xd-KLq"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ofm-aj-0yz">
+                    <rect key="frame" x="0.0" y="157" width="393" height="661"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qKn-FX-jou" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4Xg-VC-676"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ofm-aj-0yz" secondAttribute="trailing" id="JGA-hD-hIi"/>
+                <constraint firstItem="E3o-jH-u9f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OXl-U4-avk"/>
+                <constraint firstItem="Ofm-aj-0yz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q4S-Gu-07X"/>
+                <constraint firstItem="qKn-FX-jou" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Rkm-1y-msY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ofm-aj-0yz" secondAttribute="bottom" id="Rrd-PZ-9Vl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E3o-jH-u9f" secondAttribute="trailing" id="aMx-4q-kuf"/>
+                <constraint firstItem="qKn-FX-jou" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nIJ-9a-Lo7"/>
+                <constraint firstItem="E3o-jH-u9f" firstAttribute="top" secondItem="qKn-FX-jou" secondAttribute="bottom" id="rY3-d6-aW2"/>
+                <constraint firstItem="Ofm-aj-0yz" firstAttribute="top" secondItem="E3o-jH-u9f" secondAttribute="bottom" id="s9V-OM-D4H"/>
+            </constraints>
+            <point key="canvasLocation" x="14.503816793893129" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="paperplane" catalog="system" width="128" height="119"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
